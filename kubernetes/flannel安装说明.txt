@@ -1,0 +1,12 @@
+flannel安装说明
+第一个问题启动报一下错误
+Couldn't fetch network config: client: etcd cluster is unavailable or misconfigured; error #0: dial tcp
+解决方法
+配置-listen-client-urls=http://0.0.0.0:2379
+
+第二个问题启动报一下错误
+Couldn't fetch network config: 100: Key not found (/coreos.com)
+
+解决方法
+采用etcd 客户端api 设置 目前采用etcd2接口
+curl -L http://192.168.0.107:2379/v2/keys/coreos.com/network/config -X PUT -d value='{ "Network": "0.0.0.0/16" }' | python -m json.tool
