@@ -1,4 +1,0 @@
-# --hostname-override="": If non-empty, will use this string as identification instead of the actual hostname.
-NODE_HOSTNAME="--hostname-override="
-# Add your own!
-KUBE_PROXY_ARGS="--kubeconfig=/kubeconfig.yaml"

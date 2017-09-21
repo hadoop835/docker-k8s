@@ -1,8 +1,0 @@
-###
-# kubernetes scheduler config
-# --leader-elect
-KUBE_LEADER_ELECT="--leader-elect=true"
-#log dir
-KUBE_LOG_DIR="--log-dir="
-# Add your own!
-KUBE_SCHEDULER_ARGS="--kubeconfig=/kubeconfig.yaml"

@@ -8,10 +8,11 @@ set -o pipefail
 export MASTER_ADDRESS=192.168.0.107
 export ETCD_SERVERS=http://master:2379
 export SERVICE_CLUSTER_IP_RANGE=10.0.0.0/24
-export KUBE_BIN_DIR=/usr/local/kubernetes-1.7.5/bin
-export KUBE_CFG_DIR=/usr/local/kubernetes-1.7.5/cfg
-export KUBE_LOG_DIR=/usr/local/kubernetes-1.7.5/logs
-export KUBE_SSL_DIR=/usr/local/kubernetes-1.7.5/ssl
+export KUBE_HOME=/usr/local/kubernetes-1.7.5
+export KUBE_BIN_DIR=${KUBE_HOME}/bin
+export KUBE_CFG_DIR=${KUBE_HOME}/cfg
+export KUBE_LOG_DIR=${KUBE_HOME}/logs
+export KUBE_SSL_DIR=${KUBE_HOME}/ssl
 export KUBE_SERVICE=/usr/lib/systemd/system
 
 echo '============================================================'
